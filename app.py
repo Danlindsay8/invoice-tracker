@@ -11,12 +11,13 @@ FORM_TEMPLATE = """
     <form method="POST">
       Customer name: <input name="customer" required><br><br>
       Amount ($): <input name="amount" type="number" step="0.01" required><br><br>
+      Email / Phone: <input name="contact" placeholder="email@example.com" required><br><br>
       Due date: <input name="date" type="date" required><br><br>
       <button type="submit">Save & Send Reminder</button>
     </form>
     <hr>
     {% if saved %}
-      <p style="color:green;">Saved! Reminder would go to {{ customer }} for ${{ amount }} on {{ date }}.</p>
+      <p style="color:green;">Saved! Reminder queued for {{ contact }} when due is near.</p>
     {% endif %}
   </body>
 </html>
