@@ -22,7 +22,7 @@ FORM_TEMPLATE = """
 </html>
 """
 
-@app.route('/', methods= )
+@app.route('/', methods=['GET', 'POST'])
 def home():
     saved = False
     customer = amount = date = None
